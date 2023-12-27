@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MASTERLEAGUE</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./image/logo.png">
 </head>
+<header>
+    <div class="logo">
+        <h1>M</h1>
+        <p>ASTER</p>
+    </div>
+    <div class="nav">
+        <a href="#" style="--i:0" class="active">HOME</a>
+        <a href="#banner" style="--i:1">BANNER</a>
+        <a href="#master" style="--i:2">MASTER</a>
+        <a href="#" style="--i:3">MEDIA</a>
+        <a href="#" style="--i:4">ABOUT ME</a>
+    </div>
+        <i class='bx bx-menu' id="menu"></i>
+</header>
+<div class="banner" id="banner">
+    <div class="txt">
+        <h1>I'm</h1>
+        <h1>MORTEZA ABEDI!</h1>
+    </div>
+    <div class="image">
+        <img src="./image/haland.png" alt="">
+    </div>
+</div>
+<div class="master" id="master">
+    <div class="box" onclick="openfull()"><a href="#">جدول لا لیگا</a></div>
+    <div class="box" onclick="openfull()"><a href="#">آمار برترین ها</a></div>
+    <div class="box" onclick="openfull()"><a href="#">آمار بازیکنان</a></div>
+    <div class="box" onclick="openfull()"><a href="#">رقابت های باشگاهی</a></div>
+    <div class="box" onclick="openfull()"><a href="#">رقابت های ملی</a></div>
+    <div class="box" onclick="openfull()"><a href="#">بهترین گلزنان ملی</a></div>
+</div>
 <body>
-    
+    <script src="./app.js"></script>
 </body>
 </html>
