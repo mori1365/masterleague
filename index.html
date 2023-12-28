@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="./image/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <header>
     <div class="logo">
@@ -22,16 +23,16 @@
     </div>
         <i class='bx bx-menu' id="menu"></i>
 </header>
-<div class="banner" id="banner">
-    <div class="txt">
+<div class="banner" id="banner" data-aos="zoom-in-down">
+    <div class="txt" data-aos="fade-up-left">
         <h1>I'm</h1>
         <h1>MORTEZA ABEDI!</h1>
     </div>
     <div class="image">
-        <img src="./image/haland.png" alt="">
+        <img src="./image/haland.png" alt="" data-aos="fade-up-right">
     </div>
 </div>
-<div class="master" id="master">
+<div class="master" id="master" data-aos="zoom-in-down">
     <div class="box" onclick="openfull()"><a href="#">جدول لا لیگا</a></div>
     <div class="box" onclick="openfull()"><a href="#">آمار برترین ها</a></div>
     <div class="box" onclick="openfull()"><a href="#">آمار بازیکنان</a></div>
@@ -41,5 +42,12 @@
 </div>
 <body>
     <script src="./app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:500,
+        duration: 1400,
+      });
+    </script>
 </body>
 </html>
