@@ -153,7 +153,69 @@ a.active {
 .box:hover a {
     color: var(--back);
 }
+.fullscreen{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
+    transition: all .4s ease-in-out;
+    display: none;
+}
+.fullscreen iframe {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 95%;
+}
+.closebtn{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+}
 
+.bbuu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+}
+
+.bbuu img {
+    width: 100%;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.aksbaz {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(50px);
+    z-index: 999;
+    display: none;
+}
+
+#tasvir {
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
 @media (max-width:900px) {
     .nav a {
         font-size: 1.0rem;

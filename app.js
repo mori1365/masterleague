@@ -13,3 +13,19 @@ window.onscroll = () => {
     menu.classList.remove("bx-x");
     nav.classList.remove('open');
 }
+var fullscreen = document.getElementById('fullscreen');
+var iframe = fullscreen.querySelector('iframe');
+var closebtn = fullcontainer.querySelector(".closebtn");
+
+function openfull(url){
+    fullscreen.style.display="block";
+    iframe.src = url;
+}
+function closebtnfull(){
+    fullscreen.style.display="none";
+    iframe.src = '';
+}
+
+
+        
+

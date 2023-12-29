@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>picture</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .container img {
+            width: 100%;
+            border-radius: 9px;
+            cursor: pointer;
+        }
+
+        .fullscreen-overlay {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, .4);
+            backdrop-filter: blur(50px);
+            z-index: 999;
+            display: none;
+        }
+
+        #imagefullscreen {
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./image/20230807141117_[fpdl.in]_young-sport-woman-with-bottle-water-isolated_1368-65336_full.jpg"
+            alt="" onclick="openfullscreen()">
+        <img src="./image/20230807141117_[fpdl.in]_young-sport-woman-with-bottle-water-isolated_1368-65336_full.jpg"
+            alt="" onclick="openfullscreen()">
+        <img src="./image/20230807141117_[fpdl.in]_young-sport-woman-with-bottle-water-isolated_1368-65336_full.jpg"
+            alt="" onclick="openfullscreen()">
+        <img src="./image/20230807141117_[fpdl.in]_young-sport-woman-with-bottle-water-isolated_1368-65336_full.jpg"
+            alt="" onclick="openfullscreen()">
+        <img src="./image/20230807141117_[fpdl.in]_young-sport-woman-with-bottle-water-isolated_1368-65336_full.jpg"
+            alt="" onclick="openfullscreen()">
+        <img src="./image/20230807141117_[fpdl.in]_young-sport-woman-with-bottle-water-isolated_1368-65336_full.jpg"
+            alt="" onclick="openfullscreen()">
+        <img src="./image/20230807141117_[fpdl.in]_young-sport-woman-with-bottle-water-isolated_1368-65336_full.jpg"
+            alt="" onclick="openfullscreen()">
+        <img src="./image/20230807141117_[fpdl.in]_young-sport-woman-with-bottle-water-isolated_1368-65336_full.jpg"
+            alt="" onclick="openfullscreen()">
+    </div>
+    <div class="fullscreen-overlay" onclick="closefullscreen()">
+        <img src="" alt="" id="imagefullscreen">
+    </div>
+    <script>
+        var fullscreen = document.querySelector(".fullscreen-overlay");
+        var imagefullscreen = document.getElementById('imagefullscreen');
+        
+
+        function openfullscreen() {
+            var imagesrc = event.target.src;
+            fullscreen.style.display = "block";
+            imagefullscreen.src = imagesrc;
+            setTimeout(function() {
+    imagefullscreen.style.transform = "translate(-50%, -50%) scale(1)";
+  }, 50);
+        }
+        function closefullscreen() {
+            imagefullscreen.style.transform = 'translate(-50%, -50%) scale(0)';
+            setTimeout(function(){
+                fullscreen.style.display = "none";
+
+            }, 300);
+        }
+    </script>
+</body>
+
+</html>

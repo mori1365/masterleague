@@ -9,38 +9,52 @@
     <link rel="icon" href="./image/logo.png">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<header>
-    <div class="logo">
-        <h1>M</h1>
-        <p>ASTER</p>
-    </div>
-    <div class="nav">
-        <a href="#" style="--i:0" class="active">HOME</a>
-        <a href="#banner" style="--i:1">BANNER</a>
-        <a href="#master" style="--i:2">MASTER</a>
-        <a href="#" style="--i:3">MEDIA</a>
-        <a href="#" style="--i:4">ABOUT ME</a>
-    </div>
-        <i class='bx bx-menu' id="menu"></i>
-</header>
-<div class="banner" id="banner" data-aos="zoom-in-down">
-    <div class="txt">
-        <h1>I'm</h1>
-        <h1>MORTEZA ABEDI!</h1>
-    </div>
-    <div class="image">
-        <img src="./image/haland.png" alt="">
-    </div>
-</div>
-<div class="master" id="master" data-aos="zoom-in-down">
-    <div class="box" onclick="openfull('./league.HTML')"><a href="#">جدول لا لیگا</a></div>
-    <div class="box" onclick="openfull()"><a href="#">آمار برترین ها</a></div>
-    <div class="box" onclick="openfull()"><a href="#">آمار بازیکنان</a></div>
-    <div class="box" onclick="openfull()"><a href="#">رقابت های باشگاهی</a></div>
-    <div class="box" onclick="openfull()"><a href="#">رقابت های ملی</a></div>
-    <div class="box" onclick="openfull()"><a href="#">بهترین گلزنان ملی</a></div>
-</div>
 <body>
+    <header>
+        <div class="logo">
+            <h1>M</h1>
+            <p>ASTER</p>
+        </div>
+        <div class="nav">
+            <a href="#" style="--i:0" class="active">HOME</a>
+            <a href="#banner" style="--i:1">BANNER</a>
+            <a href="#master" style="--i:2">MASTER</a>
+            <a href="#" style="--i:3">MEDIA</a>
+            <a href="#" style="--i:4">ABOUT ME</a>
+        </div>
+            <i class='bx bx-menu' id="menu"></i>
+    </header>
+    <div class="banner" id="banner" data-aos="zoom-in-down">
+        <div class="txt">
+            <h1>I'm</h1>
+            <h1>MORTEZA ABEDI!</h1>
+        </div>
+        <div class="image">
+            <img src="./image/haland.png" alt="">
+        </div>
+    </div>
+    <div class="master" id="master" data-aos="zoom-in-down">
+        <div class="box" onclick="openfull('./league.HTML')"><a href="#">جدول لا لیگا</a></div>
+        <div class="box" onclick="openfull()"><a href="#">آمار برترین ها</a></div>
+        <div class="box" onclick="openfull()"><a href="#">آمار بازیکنان</a></div>
+        <div class="box" onclick="openfull()"><a href="#">رقابت های باشگاهی</a></div>
+        <div class="box" onclick="openfull()"><a href="#">رقابت های ملی</a></div>
+        <div class="box" onclick="openfull()"><a href="#">بهترین گلزنان ملی</a></div>
+    </div>
+    <div class="fullscreen" id="fullscreen">
+        <div class="closebtn" onclick="closebtnfull()">x</div>
+        <iframe src="" frameborder="0"></iframe>
+    </div>
+    <div class="bbuu">
+        <img src="./image/20230807140724_[fpdl.in]_basketball-player-grabbing-ball-with-his-left-hand_23-2147604925_full.jpg" alt="" onclick="baz()">
+        <img src="./image/20230807140724_[fpdl.in]_basketball-player-grabbing-ball-with-his-left-hand_23-2147604925_full.jpg" alt="" onclick="baz()">
+        <img src="./image/20230807140724_[fpdl.in]_basketball-player-grabbing-ball-with-his-left-hand_23-2147604925_full.jpg" alt="" onclick="baz()">
+        <img src="./image/20230807140724_[fpdl.in]_basketball-player-grabbing-ball-with-his-left-hand_23-2147604925_full.jpg" alt="" onclick="baz()">
+    </div>
+    <div class="aksbaz" onclick="baste()">
+        <img src="" alt="" id="tasvir">
+    </div>
+    
     <script src="./app.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -48,6 +62,25 @@
         offset:500,
         duration: 1400,
       });
+      var aksbaz = document.querySelector(".aksbaz");
+var tasvir = document.getElementById('tasvir');
+
+
+function baz() {
+    var imagesrc = event.target.src;
+    aksbaz.style.display = "block";
+    tasvir.src = imagesrc;
+    setTimeout(function() {
+tasvir.style.transform = "translate(-50%, -50%) scale(1)";
+}, 50);
+}
+function baste() {
+    tasvir.style.transform = 'translate(-50%, -50%) scale(0)';
+    setTimeout(function(){
+        aksbaz.style.display = "none";
+
+    }, 300);
+}
     </script>
 </body>
 </html>
