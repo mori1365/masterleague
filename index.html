@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sport website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo"><a href="#">Sports Website</a></div>
+        <div class="navbar">
+            <a href="#"  style="--i:0" class="active">Home</a>
+            <a href="#"  style="--i:1">Banner</a>
+            <a href="#"  style="--i:2">Master</a>
+            <a href="#"  style="--i:3">Media</a>
+            <a href="#"  style="--i:4">About Me!</a>
+        </div>
+        <div class="menu">
+            <a href="#" id="menu"><i class='bx bx-menu'></i></a>
+            <a href="#" class="close"><i class='bx bx-x'></i></a>
+        </div>
+    </div>
+	<div class="social">
+		<div class="ss">social media</div>
+		<div class="sosha">
+			<i class='bx bxl-instagram' style="color: rgb(131, 7, 75);"></i>
+			<i class='bx bxl-telegram' style="color: blue;"></i>
+			<i class='bx bxl-whatsapp' style="color: green;"></i>
+			<i class='bx bxl-github' style="color: #000000;"></i>
+		</div>
+	</div>
+    <!-- slider -->
+    <div class="slider">
+		<!-- fade css -->
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>IMAGE 1</h1>
+				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+			</div>
+			<img src="./image/-TBFFA-2023-FIFA-FIFPRO-11-finalists-revealed.webp" style="width: 100%; height: 100%;">
+		</div>
+		
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>IMAGE 2</h1>
+				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+			</div>
+			<img src="./image/england.webp" style="width: 100%; height: 100%;">
+		</div>
+		
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>IMAGE 3</h1>
+				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+			</div>
+			<img src="./image/kane.jpg" style="width: 100%; height: 100%;">
+		</div>
+		
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>IMAGE 4</h1>
+				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+			</div>
+			<img src="./image/messi.jpg" style="width: 100%; height: 100%;">
+		</div>
+		
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>IMAGE 5</h1>
+				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+			</div>
+			<img src="./image/tbffa2023_Womens-goalkeeper_3840x1492_web.webp" style="width: 100%; height: 100%;">
+		</div>
+		<!-- /fade css -->
+		
+		<!-- onclick js -->
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		
+		<div class="dotsbox" style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+		</div>
+		<!-- /onclick js -->
+	</div>
+	<div class="master">
+		<div class="box" onclick="openfullscreen('league.html')">جدول لالیگا</div>
+		<div class="box" onclick="openfullscreen()">2</div>
+		<div class="box" onclick="openfullscreen()">3</div>
+		<div class="box" onclick="openfullscreen()">4</div>
+		<div class="box" onclick="openfullscreen()">5</div>
+		<div class="box" onclick="openfullscreen()">6</div>
+	</div>
+	<div class="fullscreen" id="fullscreen">
+        <div class="closebtn" onclick="closebtnfull()"><i class='bx bx-x'></i></div>
+        <iframe src="" frameborder="0"></iframe>
+		</div>
+		<div class="gallery">
+			<img src="./image/ff.webp" alt="Image 1">
+			<img src="./image/-TBFFA-2023-FIFA-FIFPRO-11-finalists-revealed.webp" alt="Image 2">
+			<img src="./image/fandaik.webp" alt="Image 3">
+			<img src="./image/england.webp" alt="Image 4">
+			<img src="./image/inter.jpg" alt="Image 5">
+			<img src="./image/kane.jpg" alt="Image 6">
+			<img src="./image/martinez.webp" alt="Image 7">
+			<img src="./image/tbffa2023_Womens-goalkeeper_3840x1492_web.webp" alt="Image 8">
+			<img src="./image/mbape.webp" alt="Image 9">
+		</div>
+	
+		<div class="modal" id="modal">
+			<img class="modal-content" id="modal-image">
+		</div>
+		<div class="content">
+			<!-- محتوای صفحه شما -->
+		</div>
+	
+		<footer class="footer">
+			<div class="footer-content">
+				<div class="footer-column">
+					<h3>درباره ما</h3>
+					<p>توضیحات درباره شرکت یا وبسایت شما.</p>
+				</div>
+				<div class="footer-column">
+					<h3>لینک‌های مفید</h3>
+					<ul>
+						<li><a href="./index.html">صفحه اصلی</a></li>
+						<li><a href="#">درباره ما</a></li>
+						<li><a href="#">خدمات</a></li>
+						<li><a href="#">تماس با ما</a></li>
+					</ul>
+				</div>
+				<div class="footer-column">
+					<h3>تماس با ما</h3>
+					<ul>
+						<li><a href="tel:09304679357">0930 467 9357</a></li>
+						<li><a href="tel:09197073649">0919 707 3649</a></li>
+						<li><a href="tel:02632527257">0263 252 7257</a></li>
+					</ul>
+					<p>ایران، کرج</p>
+					<p>طراح وبسایت: مرتضی عابدی</p>
+					<p>ایمیل: <a href="mailto:m.abedi27@yahoo.com">m.abedi27@yahoo.com</a></p>
+				</div>
+			</div>
+		</footer>
+    <script src="./app.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('modal');
+    var modalImage = document.getElementById('modal-image');
+    var galleryImages = document.querySelectorAll('.gallery img');
+
+    galleryImages.forEach(function(image) {
+        image.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImage.src = this.src;
+        });
+    });
+
+    modal.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+});
+	</script>
+</body>
+</html>
