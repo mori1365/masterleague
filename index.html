@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sport website</title>
     <link rel="stylesheet" href="./style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./image/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /></head>
 <body>
     <div class="nav">
         <div class="logo"><a href="#">Sports Website</a></div>
         <div class="navbar">
             <a href="#"  style="--i:0" class="active">Home</a>
-            <a href="#"  style="--i:1">Banner</a>
-            <a href="#"  style="--i:2">Master</a>
-            <a href="#"  style="--i:3">Media</a>
-            <a href="#"  style="--i:4">About Me!</a>
+            <a href="#slider"  style="--i:1">Banner</a>
+            <a href="#master"  style="--i:2">Master</a>
+            <a href="#gallery"  style="--i:3">Media</a>
+            <a href="#footer"  style="--i:4">About Me!</a>
         </div>
-        <div class="menu">
-            <a href="#" id="menu"><i class='bx bx-menu'></i></a>
-            <a href="#" class="close"><i class='bx bx-x'></i></a>
+        <div class="icon">
+			<i class='bx bx-menu' id="menu"></i>
+            <i class='bx bx-x' id="x"></i>
         </div>
     </div>
 	<div class="social">
-		<div class="ss">social media</div>
+		<div class="ss"><p>social media</p></div>
 		<div class="sosha">
 			<i class='bx bxl-instagram' style="color: rgb(131, 7, 75);"></i>
 			<i class='bx bxl-telegram' style="color: blue;"></i>
@@ -32,7 +33,7 @@
 		</div>
 	</div>
     <!-- slider -->
-    <div class="slider">
+    <div class="slider" id="slider" data-aos="zoom-out-down">
 		<!-- fade css -->
 		<div class="myslide fade">
 			<div class="txt">
@@ -88,7 +89,7 @@
 		</div>
 		<!-- /onclick js -->
 	</div>
-	<div class="master">
+	<div class="master" id="master" data-aos="zoom-in-down">
 		<div class="box" onclick="openfullscreen('league.html')">جدول لالیگا</div>
 		<div class="box" onclick="openfullscreen()">2</div>
 		<div class="box" onclick="openfullscreen()">3</div>
@@ -100,7 +101,7 @@
         <div class="closebtn" onclick="closebtnfull()"><i class='bx bx-x'></i></div>
         <iframe src="" frameborder="0"></iframe>
 		</div>
-		<div class="gallery">
+		<div class="gallery" id="gallery" data-aos="flip-left">
 			<img src="./image/ff.webp" alt="Image 1">
 			<img src="./image/-TBFFA-2023-FIFA-FIFPRO-11-finalists-revealed.webp" alt="Image 2">
 			<img src="./image/fandaik.webp" alt="Image 3">
@@ -119,11 +120,11 @@
 			<!-- محتوای صفحه شما -->
 		</div>
 	
-		<footer class="footer">
+		<footer class="footer" id="footer">
 			<div class="footer-content">
 				<div class="footer-column">
 					<h3>درباره ما</h3>
-					<p>توضیحات درباره شرکت یا وبسایت شما.</p>
+					<p>توضیحات درباره شرکت یا وبسایت شما</p>
 				</div>
 				<div class="footer-column">
 					<h3>لینک‌های مفید</h3>
@@ -148,6 +149,7 @@
 			</div>
 		</footer>
     <script src="./app.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
     var modal = document.getElementById('modal');
@@ -165,6 +167,12 @@
         modal.style.display = 'none';
     });
 });
+
+
+AOS.init({
+        offset:500,
+        duration: 1400,
+      });
 	</script>
 </body>
 </html>
